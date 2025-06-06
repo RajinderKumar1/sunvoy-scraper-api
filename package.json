@@ -1,0 +1,15 @@
+{
+    "name": "sunvoy-scraper-api",
+    "version": "1.0.0",
+    "description": "Reverse engineering tool for extracting user data from Sunvoy legacy web application by Rajinder Kumar",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "Rajinder Kumar",
+    "engines": {
+      "node": ">=18.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }
