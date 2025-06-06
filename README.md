@@ -22,3 +22,7 @@ I used pure Node.js modules like `https`, `fs`, and `crypto` — no external dep
 
 The script writes all fetched user data 
 
+## 🎥 Demo
+
+Here’s a short Loom video explaining and showing the working output:  
+👉 [Watch Loom Demo](https://www.loom.com/share/b9a5b3ffb7b14f9f843bab6496239a52?sid=3c28530b-3804-47f7-b56a-314b7e4caf60)
