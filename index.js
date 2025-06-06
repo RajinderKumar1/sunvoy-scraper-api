@@ -244,7 +244,8 @@ class SunvoyAPI {
             return response.json;
         }
 
-        throw new Error("❌ Failed to get current user profile");
+        return null
+
     }
 
     generateCheckcode(accessToken, userId, timestamp) {
@@ -272,12 +273,16 @@ class SunvoyAPI {
 
         const users = await this.getUsers();
         const currentUser = await this.getCurrentUser();
-        const finalData = [...users, { currentUser }];
+        
+        if (currentUser) {
+            
+            users = [...users, { currentUser }];
+        }
 
         const outputFile = path.join(__dirname, "users.json");
-        fs.writeFileSync(outputFile, JSON.stringify(finalData, null, 2));
+        fs.writeFileSync(outputFile, JSON.stringify(users, null, 2));
 
-        console.log(`\n✅ Successfully saved ${finalData.length} user records to users.json`);
+        console.log(`\n✅ Successfully saved ${users.length} user records to users.json`);
     }
 }
 
